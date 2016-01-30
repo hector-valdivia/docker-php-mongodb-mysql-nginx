@@ -1,5 +1,5 @@
 keyaphp:
-  image: docker-php-mongodb-mysql-nginx
+  image: hectorlouder/docker-php-mongodb-mysql-nginx
   ports:
     - "80:80"
     - "443:443"
