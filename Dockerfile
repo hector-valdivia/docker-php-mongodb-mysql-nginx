@@ -69,7 +69,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Install phalcon
 RUN git clone --depth=1 git://github.com/phalcon/cphalcon.git
 RUN cd cphalcon/build && ./install 64bits
-RUN echo "extension=phalcon.so" > /etc/php5/mods-available/phalcon.ini
+RUN echo "extension=phalcon.so" > /etc/php5/fpm/conf.d/30-phalcon.ini
 
 ################################################################################
 # Install Node
