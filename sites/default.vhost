@@ -1,5 +1,5 @@
 server {
-  server_name default;
+  server_name keya;
   root        /var/www/public;
   index       main.php;
 
