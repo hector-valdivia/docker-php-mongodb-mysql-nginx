@@ -7,7 +7,11 @@ server {
   fastcgi_read_timeout 1800;
 
   location / {
-    try_files $uri $uri/ /index.php$is_args$args;
+    try_files $uri $uri.html $uri/ @extensionless-php;
+  }
+
+  location @extensionless-php {
+    rewrite ^(.*)$ $1.php last;
   }
 
   location /status {
